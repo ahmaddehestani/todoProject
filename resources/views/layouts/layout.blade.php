@@ -13,11 +13,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
 <!-- Navbar (Sits on top) -->
 <div class="w3-top w3-bar w3-xlarge w3-black w3-opacity-min">
-<a href="#home" class="w3-bar-item w3-button">HOME</a>
-<a href="#menu" class="w3-bar-item w3-button">CREATE TASK</a>
-<a href="#menu" class="w3-bar-item w3-button">TASK LIST</a>
-<a href="#menu" class="w3-bar-item w3-button">EDIT TASK</a>
-<a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+<a href="http://127.0.0.1:8000" class="w3-bar-item w3-button">HOME</a>
+<a href="http://127.0.0.1:8000/createTask" class="w3-bar-item w3-button">CREATE TASK</a>
+<a href="http://127.0.0.1:8000/taskList" class="w3-bar-item w3-button">TASK LIST</a>
+<a href="http://127.0.0.1:8000/editTask" class="w3-bar-item w3-button">EDIT TASK</a>
+<a href="http://127.0.0.1:8000/about" class="w3-bar-item w3-button">ABOUT</a>
 </div>
 
 @yield('content')

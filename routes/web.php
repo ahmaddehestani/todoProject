@@ -16,4 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/about', function () {
+    return view('welcome');
+});
+Route::get('/editTask', function () {
+    return view('welcome');
+});
+Route::get('/createTask', function () {
+    return view('welcome');
+});
+Route::get('/taskList', function () {
+    return view('welcome');
+});
