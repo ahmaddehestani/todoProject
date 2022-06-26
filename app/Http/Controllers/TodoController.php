@@ -12,4 +12,15 @@ class TodoController extends Controller
         $tasks= todo::all();
         return view('taskList', ["tasks"=>$tasks]);
       }
+      public function store(){
+    
+      $task = new Task();
+       $task->name=request("title");
+        $task->type=request("description");
+        $task->base=request("status");
+        TAsk::createOr($task);
+      
+        return redirect('http://127.0.0.1:8000/taskList');
+      }
+
 }

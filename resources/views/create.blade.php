@@ -7,7 +7,7 @@
 
 
 <h1> create a new pizza</h1>
-<form  action="" method="POST">
+<form  action="http://127.0.0.1:8000/store" method="POST">
     @csrf
     <label for="title">insert your Task title</label> 
     <input type="text" name="title" id="title" required>
