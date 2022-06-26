@@ -20,16 +20,16 @@ tr:nth-child(even) {
 <table>
   <tr>
   <th>Task ID</th>
-    <th>Task Name</th>
+    <th>Task Title</th>
     <th>Description</th>
-    <th>state</th>
+    <th>status</th>
   </tr>
-  @foreach($tasks as $)
+  @foreach($tasks as $task)
   <tr>
   <td> {{$task->id}}</td>
-  <td> {{$task->task}}</td>
+  <td> {{$task->title}}</td>
   <td>{{$task->description}}</td>
-  <td>{{$task->state}} </td>    
+  <td>{{$task->status}} </td>    
     </tr>
   @endforeach
  

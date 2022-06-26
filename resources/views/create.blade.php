@@ -9,8 +9,8 @@
 <h1> create a new pizza</h1>
 <form  action="" method="POST">
     @csrf
-    <label for="task"> your Task</label> 
-    <input type="text" name="task" id="task" required>
+    <label for="title">insert your Task title</label> 
+    <input type="text" name="title" id="title" required>
 
     </br></br></br>
     
@@ -18,8 +18,8 @@
     <input type="text" name="description" id="description" required>
 
     </br></br></br>
-    <label for="state"> your state</label> 
-    <input type="text" name="state" id="state" required>
+    <label for="status"> your status</label> 
+    <input type="text" name="status" id="status" required>
 
 
 

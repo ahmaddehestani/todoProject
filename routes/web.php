@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController\taskList;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +26,8 @@ Route::get('/editTask', function () {
 Route::get('/createTask', function () {
     return view('create');
 });
-Route::get('/taskList', function () {
-    return view('taskList');
-});
+Route::get('/taskList', [App\Http\Controllers\TodoController::class ,'taskList']);
+
 Route::get('/findTask', function () {
     return view('welcome');
 });
