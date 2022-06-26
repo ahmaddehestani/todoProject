@@ -23,8 +23,11 @@ Route::get('/editTask', function () {
     return view('welcome');
 });
 Route::get('/createTask', function () {
-    return view('welcome');
+    return view('create');
 });
 Route::get('/taskList', function () {
+    return view('taskList');
+});
+Route::get('/findTask', function () {
     return view('welcome');
 });
