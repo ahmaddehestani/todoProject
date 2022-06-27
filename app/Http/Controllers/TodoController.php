@@ -14,11 +14,11 @@ class TodoController extends Controller
       }
       public function store(){
     
-      $task = new Task();
-       $task->name=request("title");
-        $task->type=request("description");
-        $task->base=request("status");
-        TAsk::createOr($task);
+      $task = new Todo();
+       $task->title=request("title");
+        $task->description=request("description");
+        $task->status=request("status");
+        Todo::createOrExist($task);
       
         return redirect('http://127.0.0.1:8000/taskList');
       }

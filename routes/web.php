@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController\taskList;
+use App\Http\Controllers\TodoController\store;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::get('/editTask', function () {
 Route::get('/createTask', function () {
     return view('create');
 });
+
+Route::post('/taskStore', [App\Http\Controllers\TodoController::class ,'store']);
 Route::get('/taskList', [App\Http\Controllers\TodoController::class ,'taskList']);
 
 Route::get('/findTask', function () {

@@ -17,6 +17,10 @@ tr:nth-child(even) {
 }
 </style>
 </head>
+<title>Task List</title>
+@extends('layouts.layout')
+@section('content')
+</br></br></br></br>
 <table>
   <tr>
   <th>Task ID</th>
@@ -34,3 +38,4 @@ tr:nth-child(even) {
   @endforeach
  
 </table>
+@endsection
