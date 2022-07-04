@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController;
 use App\Http\Controllers\TodoController\taskList;
 use App\Http\Controllers\TodoController\store;
+use App\Http\Controllers\TodoController\findOne;
+use App\Http\Controllers\TodoController\remove;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,22 +18,36 @@ use App\Http\Controllers\TodoController\store;
 |
 */
 
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about', function () {
-    return view('welcome');
+Route::get('todos/about', function () {
+    return view('about');
 });
-Route::get('/editTask', function () {
-    return view('welcome');
+Route::get('todos/editTask', function () {
+    return view('edit');
 });
-Route::get('/createTask', function () {
+Route::get('todos/createTask', function () {
     return view('create');
 });
 
-Route::post('/taskStore', [App\Http\Controllers\TodoController::class ,'store']);
-Route::get('/taskList', [App\Http\Controllers\TodoController::class ,'taskList']);
+Route::get('todos/taskList', [TodoController::class ,'taskList'])->name('taskList');
+Route::post('todos/taskStore', [TodoController::class ,'store'])->name('taskStore');
+Route::post('todos/taskUpdate', [TodoController::class ,'taskUpdate'])->name('taskUpdate');
+Route::post('todos/findOne', [TodoController::class ,'findOne'])->name('findOne');
+Route::post('todos/remove', [TodoController::class ,'remove'])->name('remove');
 
-Route::get('/findTask', function () {
-    return view('welcome');
+Route::get('todos/findTask', function () {
+    return view('search');
 });
+
+Route::get('todos/task/{todo}/edit', function (Todo $todo) {
+    return view('create',compact('todo'));
+});
+
+
+
+// Todo::query()->where('id',$request->id)->update(['title'=>request->title])

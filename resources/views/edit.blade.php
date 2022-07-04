@@ -1,4 +1,4 @@
-<title>create</title>
+<title>edit form</title>
 @extends('layouts.layout')
 @section('content')
 <div>
@@ -6,19 +6,8 @@
 </br></br>
 <fieldset style="background-color: #eeeeee">
 
-<h1> CREATE NEW TASK</h1>
-
-
-@if ($errors->any())
-    <div class="alert alert-danger" style="color:red">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-<form  action="{{route('taskStore')}}" method="POST" style="margin:30px">
+<h1> EDIT YOUR TASK</h1>
+<form  action="{{route('taskUpdate')}}" method="POST" style="margin:30px">
     @csrf
     <label for="title">insert your Task title</label> 
     <input type="text" name="title" id="title" required>
@@ -36,7 +25,7 @@
 
     </br></br></br>
 
-<input type="submit" value="create Task">
+<input type="submit" value="edit Task">
 
 </form>
 </fieldset>
