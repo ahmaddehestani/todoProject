@@ -42,7 +42,7 @@ tr:nth-child(even) {
 
 
 
-<form  action="{{route('remove')}}" method="POST" style="margin:30px">
+<form  action="{{route('todo.remove')}}" method="POST" style="margin:30px">
     @csrf
     
     <input type="hidden" name="id" id="$task->id" value="{{$task->id}}" >

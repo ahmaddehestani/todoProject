@@ -7,7 +7,7 @@
 <fieldset style="background-color: #eeeeee">
 
 <h1> SEARCH YOUR TASK BY TITLE OR ID</h1>
-<form  action="{{route('findOne')}}" method="POST" style="margin:30px">
+<form  action="{{route('todo.findOne')}}" method="POST" style="margin:30px">
     @csrf
    
     <label for="id"> your ID</label> 

@@ -18,7 +18,7 @@
         </ul>
     </div>
 @endif
-<form  action="{{route('taskStore')}}" method="POST" style="margin:30px">
+<form  action="{{route('todo.taskStore')}}" method="POST" style="margin:30px">
     @csrf
     <label for="title">insert your Task title</label> 
     <input type="text" name="title" id="title" required>

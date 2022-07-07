@@ -7,8 +7,12 @@
 <fieldset style="background-color: #eeeeee">
 
 <h1> EDIT YOUR TASK</h1>
-<form  action="{{route('taskUpdate')}}" method="POST" style="margin:30px">
+<form  action="{{route('todo.taskUpdate')}}" method="POST" style="margin:30px">
     @csrf
+    <label for="id">insert your Task ID</label> 
+    <input type="text" name="id" id="id" required>
+
+    </br></br></br>
     <label for="title">insert your Task title</label> 
     <input type="text" name="title" id="title" required>
 
